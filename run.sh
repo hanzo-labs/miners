@@ -1,5 +1,5 @@
 run() {
-    ssh root@$1 -i ~/.ssh/digital-ocean-hanzo 'bash -s' < money.sh
+    ssh -oStrictHostKeyChecking=no root@$1 -i ~/.ssh/digital-ocean-hanzo 'bash -s' < money.sh &
 }
 
 run 45.55.49.142
@@ -46,3 +46,8 @@ run 159.89.190.239
 run 138.197.100.28
 run 159.89.39.153
 run 174.138.49.37
+run 159.89.39.146
+run 159.89.39.153
+run 174.138.49.37
+run 159.89.177.71
+wait
